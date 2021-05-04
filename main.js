@@ -33,3 +33,59 @@ function newimage(get_image){
 
     
 }
+window.addEventListener("keydown",mykeydown)
+function mykeydown(e){
+      var keypressed= e.keyCode
+      console.log(keypressed);
+      if(e.shiftKey==true && keypressed=="80"){
+          console.log("shift and p clicked");
+          block_image_width= block_image_width + 10;
+          block_image_height= block_image_height + 10;
+          document.getElementById("current_width").innerHTML=block_image_width;
+          document.getElementById("current_height").innerHTML=block_image_height;
+      }
+      if(e.shiftKey==true && keypressed=="77"){
+        console.log("shift and m clicked");
+        block_image_width= block_image_width - 10;
+        block_image_height= block_image_height - 10;
+        document.getElementById("current_width").innerHTML=block_image_width;
+        document.getElementById("current_height").innerHTML=block_image_height;
+    }
+    if(keypressed=="70"){
+        newimage("ironman_face.png");
+        console.log("f pressed"); 
+    }
+    if(keypressed=="66"){
+        newimage("hulkd_body.png");
+        console.log("b pressed");
+    }
+    if(keypressed=="76"){
+        newimage("spiderman_legs.png");
+        console.log("l pressed");
+    }
+    if(keypressed=="82"){
+        newimage("thor_right_hand.png");
+        console.log("r pressed");
+    }
+    if(keypressed=="72"){
+        newimage("thor_left_hand.png");
+        console.log("h pressed");
+    }
+    if(keypressed=="37"){
+        left();
+       console.log("left arrow");
+    }
+    if(keypressed=="38"){
+        up();
+       console.log("up arrow");
+
+    }
+    if(keypressed=="39"){
+        right();
+       console.log("right arrow");}
+
+       if(keypressed=="40"){
+        down();
+       console.log("down arrow");
+    }
+}
